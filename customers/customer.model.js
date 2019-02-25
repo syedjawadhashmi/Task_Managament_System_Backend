@@ -9,7 +9,9 @@ const schema = new Schema({
     address: { type: String },
     city: { type: String },
     zipCode: { type: Number },
-    country: { type: String }
+    country: { type: String },
+    lastUpdated: { type: Date, default: Date.now },
+    createdAt: { type: Date, default: Date.now },
 });
 
 schema.set('toJSON', { virtuals: true });

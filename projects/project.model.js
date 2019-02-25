@@ -7,11 +7,12 @@ const schema = new Schema({
     ticketSummary: { type: String },
     status: { type: Number },
     number: { type: String },
-    lastUpdated: { type: Date, default: Date.now },
     assigned: { type: Schema.Types.ObjectId, ref: 'customers' },
     priority: { type: Number },
-    Deadline: { type: Date, default: Date.now },
-    customer: { type: Schema.Types.ObjectId, ref: 'customers' }
+    deadline: { type: Date, default: Date.now },
+    customer: { type: Schema.Types.ObjectId, ref: 'customers' },
+    lastUpdated: { type: Date, default: Date.now },
+    createdAt: { type: Date, default: Date.now },
 });
 
 schema.set('toJSON', { virtuals: true });
