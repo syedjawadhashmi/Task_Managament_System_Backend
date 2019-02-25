@@ -19,12 +19,13 @@ app.use('/users', require('./users/users.controller'));
 app.use('/customers', require('./customers/customer.controller'));
 app.use('/projects', require('./projects/project.controller'));
 app.use('/comments', require('./comments/comment.controller'));
+app.use('/developers', require('./developers/developer.controller'));
 
 // global error handler
 app.use(errorHandler);
 
 // start server
-const port = process.env.APP_ENV === 'production' ? (process.env.PORT || 80) : process.env.PORT;
+const port = process.env.APP_ENV === 'production' ? (process.env.PORT || 80) : process.env.APP_PORT;
 const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });

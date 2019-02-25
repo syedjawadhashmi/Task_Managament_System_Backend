@@ -13,5 +13,6 @@ module.exports = {
     User: require('../users/user.model'),
     Customer: require('../customers/customer.model'),
     Project: require('../projects/project.model'),
-    Comment: require('../comments/comment.model')
+    Comment: require('../comments/comment.model'),
+    Developer: require('../developers/developer.model')
 };
