@@ -20,8 +20,6 @@ app.use('/customers', require('./customers/customer.controller'));
 app.use('/projects', require('./projects/project.controller'));
 app.use('/comments', require('./comments/comment.controller'));
 
-console.log('Deploy to Heroku');
-
 // global error handler
 app.use(errorHandler);
 
