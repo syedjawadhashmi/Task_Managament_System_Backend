@@ -24,7 +24,7 @@ app.use('/comments', require('./comments/comment.controller'));
 app.use(errorHandler);
 
 // start server
-const port = process.env.APP_ENV === 'production' ? (process.env.PORT || 80) : process.env.APP_PORT;
+const port = process.env.APP_ENV === 'production' ? (process.env.PORT || 80) : process.env.PORT;
 const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });
